@@ -17,8 +17,7 @@ var sl = new SL({
 
 app.get('/realtimeInformation', (req, res) => {
     sl.realtimeInformation({
-        siteid: req.query.siteid,
-        timewindow: 60
+        siteid: req.query.siteid
     }).then((slRes) => {
         console.log(slRes)
         res.send(slRes)

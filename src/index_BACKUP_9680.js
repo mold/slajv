@@ -1,14 +1,37 @@
+<<<<<<< HEAD
 import {
-    getStationTrains,
-    getSiteId
+	getStationTrains,
+	getSiteId
 } from './functions';
 import './index.scss';
 import {
-    stations,
-    stationsFull
+	stations
 } from './constants.js';
 import "./map/map.js";
-import moment from "moment";
+
+let skärmarbrinkTrains1 = null;
+let gullmarsplanTrains1 = null;
+let skärmarbrinkTrains2 = null;
+let gullmarsplanTrains2 = null;
+
+getStationTrains(9188).then((trains) => {
+	skärmarbrinkTrains1 = trains.filter(train => train.JourneyDirection == 1);
+	skärmarbrinkTrains2 = trains.filter(train => train.JourneyDirection == 2);
+	console.log(skärmarbrinkTrains1);
+
+});
+getStationTrains(9189).then((trains) => {
+	gullmarsplanTrains1 = trains.filter(train => train.JourneyDirection == 1);
+	gullmarsplanTrains2 = trains.filter(train => train.JourneyDirection == 2);
+	console.log(gullmarsplanTrains1);
+
+});
+=======
+import {getStationTrains, getSiteId} from './functions';
+import './index.scss';
+import {stationsFull} from './constants.js';
+import moment from 'moment';
+>>>>>>> 040b4fc0e962598d2d29a5c5526d60178d1183ca
 
 
 function getTrainsOnSpecificLine(lineNumber, stations) {
@@ -17,7 +40,6 @@ function getTrainsOnSpecificLine(lineNumber, stations) {
     let promiseArr = line.map(station => getStationTrains(station.siteId));
 
     return Promise.all(promiseArr).then(trains => {
-        console.log("all?")
         // let temp = _.uniqBy(trains, "JourneyNumber")[0]; // unique trains for stations belonging to a line
         // need to filter out trains on other lines that share the same stations
         return _.flatten(trains).filter(train => train.LineNumber == lineNumber.toString());
@@ -26,7 +48,6 @@ function getTrainsOnSpecificLine(lineNumber, stations) {
 
 let line11 = getTrainsOnSpecificLine(11, stationsFull);
 line11.then(trains => {
-        console.log("trains?")
     var myVar = setInterval(myTimer, 1000);
 
     //let trainTimeArray = trains.map(train => moment(train.TimeTabledDateTime))

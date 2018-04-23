@@ -1,14 +1,7 @@
-import {
-    getStationTrains,
-    getSiteId
-} from './functions';
+import {getStationTrains, getSiteId} from './functions';
 import './index.scss';
-import {
-    stations,
-    stationsFull
-} from './constants.js';
-import "./map/map.js";
-import moment from "moment";
+import {stationsFull} from './constants.js';
+import moment from 'moment';
 
 
 function getTrainsOnSpecificLine(lineNumber, stations) {
@@ -17,7 +10,6 @@ function getTrainsOnSpecificLine(lineNumber, stations) {
     let promiseArr = line.map(station => getStationTrains(station.siteId));
 
     return Promise.all(promiseArr).then(trains => {
-        console.log("all?")
         // let temp = _.uniqBy(trains, "JourneyNumber")[0]; // unique trains for stations belonging to a line
         // need to filter out trains on other lines that share the same stations
         return _.flatten(trains).filter(train => train.LineNumber == lineNumber.toString());
@@ -26,7 +18,6 @@ function getTrainsOnSpecificLine(lineNumber, stations) {
 
 let line11 = getTrainsOnSpecificLine(11, stationsFull);
 line11.then(trains => {
-        console.log("trains?")
     var myVar = setInterval(myTimer, 1000);
 
     //let trainTimeArray = trains.map(train => moment(train.TimeTabledDateTime))
@@ -60,3 +51,5 @@ line11.then(trains => {
 
 
 document.getElementById('root').innerHTML = "hej";
+
+
