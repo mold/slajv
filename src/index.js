@@ -1,6 +1,7 @@
 import {getStationTrains, getSiteId} from './functions';
 import './index.scss';
 import {stationsFull} from './constants.js';
+import moment from 'moment';
 
 
 function getTrainsOnSpecificLine(lineNumber, stations) {
@@ -15,28 +16,21 @@ function getTrainsOnSpecificLine(lineNumber, stations) {
     })
 }
 
-getTrainsOnSpecificLine(11, stationsFull).then(trains => console.log(trains));
+let line11 = getTrainsOnSpecificLine(11, stationsFull);
+line11.then(trains => {
+    var myVar = setInterval(myTimer, 1000);
 
+    //let trainTimeArray = trains.map(train => moment(train.TimeTabledDateTime))
 
+    function myTimer() {
+        trains.forEach(train => {
+            if (moment().isAfter(moment(train.TimeTabledDateTime))) {
+                console.log(moment(train.TimeTabledDateTime).fromNow());
+            }
+        });
+    }
 
-// let skärmarbrinkTrains1 = null;
-// let gullmarsplanTrains1 = null;
-// let skärmarbrinkTrains2 = null;
-// let gullmarsplanTrains2 = null;
-
-// getStationTrains(9188).then((trains) => {
-//     skärmarbrinkTrains1 = trains.filter(train => train.JourneyDirection == 1);
-//     skärmarbrinkTrains2 = trains.filter(train => train.JourneyDirection == 2);
-//     console.log(skärmarbrinkTrains1);
-    
-// });
-// getStationTrains(9189).then((trains) => {
-//     gullmarsplanTrains1 = trains.filter(train => train.JourneyDirection == 1);
-//     gullmarsplanTrains2 = trains.filter(train => train.JourneyDirection == 2);
-//     console.log(gullmarsplanTrains1);
-    
-// });
-
+})
 
 // temp code goes here!!!! 
 //let slussenLocation = getSiteId("slussen").then((location) => {console.log(location)});
