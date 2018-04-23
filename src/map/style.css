@@ -19,3 +19,14 @@ text {
 .end-station {
 	font-size: 1.1em;
 }
+
+.slider-container{
+	position: absolute;
+	top:0;
+	left:0;
+	padding: 1em;
+}
+
+.along-slider{
+	width:800px;
+}

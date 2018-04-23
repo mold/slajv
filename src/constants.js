@@ -328,7 +328,11 @@ export const stationsFull = [
         "origName": "T-Centralen (Stockholm)",
         "siteId": "9001",
         "name": "T-Centralen",
-        "lines": [10, 11, 13, 14, 17, 18, 19]
+        "lines": [10, 11, 13, 14, 17, 18, 19],
+          "pointOnPath":{
+            11:0.153,
+            10:0.153
+        }
     },
     {
         "origName": "Gamla stan (Stockholm)",
@@ -574,43 +578,68 @@ export const stationsFull = [
         "origName": "Rådhuset (Stockholm)",
         "siteId": "9309",
         "name": "Rådhuset",
-        "lines": [10, 11]
+        "lines": [10, 11],
+          "pointOnPath":{
+            11:0.387,
+            10:0.387
+        }
     },
     {
         "origName": "Fridhemsplan (Stockholm)",
         "siteId": "9115",
         "name": "Fridhemsplan",
-        "lines": [10, 11, 17, 18, 19]
+        "lines": [10, 11, 17, 18, 19],
+          "pointOnPath":{
+            11:0.470,
+            10:0.470
+        }
     },
     {
         "origName": "Stadshagen (Stockholm)",
         "siteId": "9307",
         "name": "Stadshagen",
-        "lines": [10, 11]
+        "lines": [10, 11],
+          "pointOnPath":{
+            11:0.549,
+            10:0.549
+        }
     },
     {
         "origName": "Västra skogen (Solna)",
         "siteId": "9306",
         "name": "Västra skogen",
-        "lines": [10, 11]
+        "lines": [10, 11],
+          "pointOnPath":{
+            11:0.600,
+            10:0.600
+        }
     },
     {
         "origName": "Solna centrum (Solna)",
         "siteId": "9305",
         "name": "Solna centrum",
-        "lines": [11]
+        "lines": [11],
+          "pointOnPath":{
+            11:0.698,
+        }
     },
     {
         "origName": "Näckrosen (Solna)",
         "siteId": "9304",
         "name": "Näckrosen",
-        "lines": [11]
+        "lines": [11],
+          "pointOnPath":{
+            11:0.764,
+        }
     },
     {
         "origName": "Hallonbergen (Sundbyberg)",
         "siteId": "9303",
         "name": "Hallonbergen",
-        "lines": [11]
+        "lines": [11],
+          "pointOnPath":{
+            11:0.823,
+        }
     },
     {
         "origName": "Rinkeby (Stockholm)",
@@ -634,25 +663,38 @@ export const stationsFull = [
         "origName": "Kista (Stockholm)",
         "siteId": "9302",
         "name": "Kista",
-        "lines": [11]
+        "lines": [11],
+        "pointOnPath":{
+            11:0.880,
+        }
     },
     {
         "origName": "Husby (Stockholm)",
         "siteId": "9301",
         "name": "Husby",
-        "lines": [11]
+        "lines": [11],
+        "pointOnPath":{
+            11: 0.941,
+        }
     },
     {
         "origName": "Akalla (Stockholm)",
         "siteId": "9300",
         "name": "Akalla",
-        "lines": [11]
+        "lines": [11],
+        "pointOnPath":{
+            11: 0.997,
+        }
     },
     {
         "origName": "Kungsträdgården (tunnelbana) (Stockholm)",
         "siteId": "9340",
         "name": "Kungsträdgården",
-        "lines": [10, 11]
+        "lines": [10, 11],
+          "pointOnPath":{
+            11:0.010,
+            10:0.010
+        }
     },
     {
         "origName": "Bergshamra (Solna)",
