@@ -112,7 +112,7 @@ export const stationsFull = [
         "origName": "Slussen (Stockholm)",
         "siteId": "9192",
         "name": "Slussen",
-        "lines": [10, 11, 13, 14, 17, 18, 19]
+        "lines": [13, 14, 17, 18, 19]
     },
     {
         "origName": "Medborgarplatsen (Stockholm)",
@@ -229,12 +229,6 @@ export const stationsFull = [
         "lines": [17, 18, 19]
     },
     {
-        "origName": "Fridhemsplan (Stockholm)",
-        "siteId": "9115",
-        "name": "Fridhemsplan",
-        "lines": [10, 11, 17, 18, 19]
-    },
-    {
         "origName": "Thorildsplan (Stockholm)",
         "siteId": "9114",
         "name": "Thorildsplan",
@@ -340,7 +334,7 @@ export const stationsFull = [
         "origName": "Gamla stan (Stockholm)",
         "siteId": "9193",
         "name": "Gamla stan",
-        "lines": [10, 11, 13, 14, 17, 18, 19]
+        "lines": [13, 14, 17, 18, 19]
     },
     {
         "origName": "Hammarbyhöjden (Stockholm)",
@@ -637,12 +631,6 @@ export const stationsFull = [
         "lines": [10]
     },
     {
-        "origName": "Kymmendö (Haninge)",
-        "siteId": "225",
-        "name": "Kymlinge",
-        "lines": [11]
-    },
-    {
         "origName": "Kista (Stockholm)",
         "siteId": "9302",
         "name": "Kista",
@@ -688,31 +676,31 @@ export const stationsFull = [
         "origName": "Huvudsta (Solna)",
         "siteId": "9327",
         "name": "Huvudsta",
-        "lines": [11]
+        "lines": [10]
     },
     {
         "origName": "Solna strand (Solna)",
         "siteId": "9326",
         "name": "Solna strand",
-        "lines": [11]
+        "lines": [10]
     },
     {
         "origName": "Sundbybergs centrum (Sundbyberg)",
         "siteId": "9325",
         "name": "Sundbybergs centrum",
-        "lines": [11]
+        "lines": [10]
     },
     {
         "origName": "Duvbo (Sundbyberg)",
         "siteId": "9324",
         "name": "Duvbo",
-        "lines": [11]
+        "lines": [10]
     },
     {
         "origName": "Rissne (Sundbyberg)",
         "siteId": "9323",
         "name": "Rissne",
-        "lines": [11]
+        "lines": [10]
     },
     {
         "origName": "Skarpnäck (t-banan) (Stockholm)",
