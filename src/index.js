@@ -55,7 +55,7 @@ line11.then(trains => {
     if (lastPassedStation && comingStations.length > 0) {
       let stationTimeDifference = comingStations[0].expectedMilliseconds - lastPassedStation.expectedMilliseconds;
       let timeUntilStation = comingStations[0].expectedMilliseconds - moment().valueOf();
-      let progress = ((stationTimeDifference/timeUntilStation));
+      let progress = 100*(1-(timeUntilStation/stationTimeDifference));
 
       console.log("From: " + lastPassedStation.StopAreaName + " To: " + comingStations[0].StopAreaName + " Progress: " + progress + "%");
       console.log("From: " + moment(lastPassedStation.expectedMilliseconds).format("DD MMM YYYY hh:mm a") + " To: " + moment(comingStations[0].expectedMilliseconds).format("DD MMM YYYY hh:mm a"));
