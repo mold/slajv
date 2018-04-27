@@ -10,35 +10,25 @@ import {
 import "./map/map.js";
 import moment from "moment";
 
-function getTrainsOnSpecificLineV2(lineNumber, stations) {
-    let line = stations.filter(station => station.lines.includes(lineNumber));
+function getStationsOnSpecificLine(lineNumber, constantStations) {
+    let line = constantStations.filter(station => station.lines.includes(lineNumber));
     let promiseArr = line.map(station => getStationTrains(station.siteId));
-    return Promise.all(promiseArr).then(trains => {
-      var filteredTrains = _.flatten(trains).filter(train => train.LineNumber == lineNumber.toString())
-      filteredTrains = filteredTrains.map(train => {
-        train.expectedMilliseconds = moment(train.ExpectedDateTime).valueOf();
-        return train;
+
+    return Promise.all(promiseArr).then(stations => {
+      var filteredStations = _.flatten(stations).filter(station => station.LineNumber == lineNumber.toString())
+      filteredStations = filteredStations.map(station => {
+        station.expectedMilliseconds = moment(station.ExpectedDateTime).valueOf();
+        return station;
       });
-      var uniqueTrains = _.uniqBy(filteredTrains, "JourneyNumber");
+      var uniqueTrains = _.uniqBy(filteredStations, "JourneyNumber");
       var uniqueJurneyNumbers = uniqueTrains.map(train => train.JourneyNumber);
       var temp2 = [];
-      uniqueJurneyNumbers.forEach(journeyNumber => {temp2.push(filteredTrains.filter(train => train.JourneyNumber === journeyNumber))});
+      uniqueJurneyNumbers.forEach(journeyNumber => {temp2.push(filteredStations.filter(train => train.JourneyNumber === journeyNumber))});
       return temp2;
     })
 }
 
-function getTrainsOnSpecificLine(lineNumber, stations) {
-    let line = stations.filter(station => station.lines.includes(lineNumber));
-    let promiseArr = line.map(station => getStationTrains(station.siteId));
-    return Promise.all(promiseArr).then(trains => {
-        console.log("all?")
-        // let temp = _.uniqBy(trains, "JourneyNumber")[0]; // unique trains for stations belonging to a line
-        // need to filter out trains on other lines that share the same stations
-        return _.flatten(trains).filter(train => train.LineNumber == lineNumber.toString());
-    })
-}
-
-let line11 = getTrainsOnSpecificLineV2(11, stationsFull);
+let line11 = getStationsOnSpecificLine(11, stationsFull);
 
 line11.then(trains => {
   trains.forEach(trainArray => {
@@ -48,7 +38,7 @@ line11.then(trains => {
   console.log("temp: ", temp);
   var myVar = setInterval(myTimer, 1000);
   function myTimer() {
-    
+
     let passedStations = temp.filter(train => train.expectedMilliseconds < moment().valueOf()); // stations already passed by the train
     let lastPassedStation = passedStations[passedStations.length - 1]; // last station
 
@@ -76,48 +66,5 @@ line11.then(trains => {
 
   }
 });
-
-// let line11 = getTrainsOnSpecificLine(11, stationsFull);
-// line11.then(trains => {
-//   console.log("trains?")
-//   var myVar = setInterval(myTimer, 1000);
-//
-//   var uniqueTrains = _.uniqBy(trains, "JourneyNumber");
-//
-//   var temp = uniqueTrains.map(train => train.JourneyNumber);
-//   console.log("temp: ", temp);
-//   var temp2 = [];
-//   temp.forEach(journeyNumber => {temp2.push(trains.filter(train => train.JourneyNumber === journeyNumber))});
-//   console.log(temp2);
-//
-//
-//
-//   var singleTrain = trains.filter(train => train.JourneyNumber === uniqueTrains[5].JourneyNumber);
-//   function myTimer() {
-//     singleTrain.forEach(train => {
-//       if (moment().isAfter(moment(train.TimeTabledDateTime))) {
-//         console.log(moment(train.TimeTabledDateTime).fromNow());
-//       }
-//     });
-//   }
-// })
-
-// temp code goes here!!!!
-//let slussenLocation = getSiteId("slussen").then((location) => {console.log(location)});
-
-// let stationArray = [];
-
-// stations.forEach((station, i) => {
-//     setTimeout(function () {
-//         getSiteId(station).then((location) => {
-//             stationArray.push({origName: location.Name, siteId: location.SiteId, name: station})
-//         });
-//         console.log(stationArray);
-//     }, 2000 * i);
-// })
-// console.log(stationArray);
-// ---------------------------------------------------------------------------------------
-
-
 
 document.getElementById('root').innerHTML = "hej";
