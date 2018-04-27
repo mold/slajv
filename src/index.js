@@ -45,11 +45,13 @@ line11.then(trains => {
     //console.log(trainArray);
   })
   let temp = _.orderBy(trains[1], ['expectedMilliseconds'],['asc']);
-  console.log(temp);
-
+  console.log("temp: ", temp);
   var myVar = setInterval(myTimer, 1000);
   function myTimer() {
-    let lastPassedStation = temp.filter(train => train.expectedMilliseconds < moment().valueOf())[0]; // stations already passed by the train
+    
+    let passedStations = temp.filter(train => train.expectedMilliseconds < moment().valueOf()); // stations already passed by the train
+    let lastPassedStation = passedStations[passedStations.length - 1]; // last station
+
     let comingStations = temp.filter(train => train.expectedMilliseconds > moment().valueOf()); // stations already passed by the train
 
     if (lastPassedStation && comingStations.length > 0) {
