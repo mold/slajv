@@ -46,12 +46,9 @@ export function removeTrainCircle(journeyNumber) {
   $("#train-tracer-" + journeyNumber).remove();
 }
 
-window.removeTrainCircle = removeTrainCircle;
-
 function nameToClass(name) {
   return "name-" + name.toLowerCase().replace(/\s/g, "-");
 }
-
 
 $(() => {
   fetch(map).then(res => {

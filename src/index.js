@@ -91,12 +91,12 @@ line11.then(trains => {
 
     if (trainsIntransit.length > 1) { // naïve and flawed fix for the problem stated above.
       let temp = trainsIntransit.filter(train =>{
-        let remove = train.timeStamp === (_.maxBy(trainsIntransit, 'timeStamp')).timeStamp;
-        if(remove){
+        let keep = train.timeStamp === (_.maxBy(trainsIntransit, 'timeStamp')).timeStamp;
+        if(!keep){
           removeTrainCircle(train.journeyNumber);
         }
 
-        return remove;
+        return keep;
       });
       console.log(temp);
     }
