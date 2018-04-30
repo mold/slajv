@@ -7,8 +7,9 @@ import {
     stations,
     stationsFull
 } from './constants.js';
-import "./map/map.js";
+import {moveTrainCircle, removeTrainCircle} from "./map/map.js";
 import moment from "moment";
+import "./map/style.scss"
 
 function getStationsOnSpecificLine(lineNumber, constantStations) {
     let line = constantStations.filter(station => station.lines.includes(lineNumber));
@@ -44,7 +45,7 @@ line11.then(trains => {
   var myVar = setInterval(myTimer, 1000);
   function myTimer() {
     let timeStamp = moment().valueOf(); // used for determining if a train has stopped at the last station on the line
-    
+
     trains.forEach(stationArray => { // loop through all the trains stations
       let temp = _.orderBy(stationArray, ['expectedMilliseconds'],['asc']);
 
@@ -68,6 +69,8 @@ line11.then(trains => {
           trainsIntransit.push(trainToAdd);
         }
 
+        moveTrainCircle(11, trainToAdd.journeyNumber, trainToAdd.from, trainToAdd.to, progress);
+
         /* The stations for trains in the array "trainsIntransit" will be
          * overwritten by new stations ass the tranin passes the current
          * station.
@@ -87,13 +90,17 @@ line11.then(trains => {
     })
 
     if (trainsIntransit.length > 1) { // naïve and flawed fix for the problem stated above.
-      let temp = trainsIntransit.filter(train => train.timeStamp === (_.maxBy(trainsIntransit, 'timeStamp')).timeStamp);
+      let temp = trainsIntransit.filter(train =>{
+        let remove = train.timeStamp === (_.maxBy(trainsIntransit, 'timeStamp')).timeStamp;
+        if(remove){
+          removeTrainCircle(train.journeyNumber);
+        }
+
+        return remove;
+      });
       console.log(temp);
     }
   }
-
-
-
 
 });
 
