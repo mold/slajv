@@ -116,7 +116,8 @@ export const stationsFull = [{
       18: 0.512,
       14: 0.421,
       13: 0.235,
-      19: 0.385
+      19: 0.385,
+      17: 0.383
     }
   },
   {
@@ -126,7 +127,8 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.476,
-      19: 0.364
+      19: 0.364,
+      17: 0.35
     }
   },
   {
@@ -136,7 +138,8 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.439,
-      19: 0.343
+      19: 0.343,
+      17: 0.317
     }
   },
   {
@@ -146,7 +149,8 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.404,
-      19: 0.323
+      19: 0.323,
+      17: 0.284
     }
   },
   {
@@ -155,7 +159,8 @@ export const stationsFull = [{
     "name": "Skärmarbrink",
     "lines": [17, 18],
     "pointOnPath": {
-      18: 0.368
+      18: 0.368,
+      17: 0.251
     }
   },
   {
@@ -264,6 +269,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.681,
+      17: 0.537,
       19: 0.484
     }
   },
@@ -274,6 +280,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.724,
+      17: 0.576,
       19: 0.509
     }
   },
@@ -284,6 +291,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.772,
+      17: 0.62,
       19: 0.536
     }
   },
@@ -294,6 +302,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.817,
+      17: 0.662,
       19: 0.563,
     }
   },
@@ -304,6 +313,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.905,
+      17: 0.742,
       19: 0.614
     }
   },
@@ -314,6 +324,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.952,
+      17: 0.785,
       19: 0.642,
     }
   },
@@ -324,6 +335,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 1,
+      17: 0.827,
       19: 0.67
     }
   },
@@ -333,7 +345,8 @@ export const stationsFull = [{
     "name": "Stora mossen",
     "lines": [17, 19],
     "pointOnPath": {
-      19: 0.697
+      19: 0.697,
+      17: 0.87,
     }
   },
   {
@@ -342,7 +355,8 @@ export const stationsFull = [{
     "name": "Abrahamsberg",
     "lines": [17, 19],
     "pointOnPath": {
-      19: 0.725
+      19: 0.725,
+      17: 0.913,
     }
   },
   {
@@ -352,6 +366,7 @@ export const stationsFull = [{
     "lines": [17, 19],
     "pointOnPath": {
       19: 0.752,
+      17: 0.956,
     }
   },
   {
@@ -360,7 +375,8 @@ export const stationsFull = [{
     "name": "Åkeshov",
     "lines": [17, 19],
     "pointOnPath": {
-      19: 0.78
+      19: 0.78,
+      17: 1
     }
   },
   {
@@ -455,7 +471,8 @@ export const stationsFull = [{
       18: 0.591,
       14: 0.35,
       13: 0.183,
-      19: 0.431
+      19: 0.431,
+      17: 0.455
     }
   },
   {
@@ -467,32 +484,45 @@ export const stationsFull = [{
       18: 0.548,
       14: 0.388,
       13: 0.211,
-      19: 0.406
+      19: 0.406,
+      17: 0.416
     }
   },
   {
     "origName": "Hammarbyhöjden (Stockholm)",
     "siteId": "9144",
     "name": "Hammarbyhöjden",
-    "lines": [17]
+    "lines": [17],
+    "pointOnPath": {
+      17: 0.21
+    }
   },
   {
     "origName": "Björkhagen (Stockholm)",
     "siteId": "9143",
     "name": "Björkhagen",
-    "lines": [17]
+    "lines": [17],
+    "pointOnPath": {
+      17: 0.165
+    }
   },
   {
     "origName": "Kärrtorp (Stockholm)",
     "siteId": "9142",
     "name": "Kärrtorp",
-    "lines": [17]
+    "lines": [17],
+    "pointOnPath": {
+      17: 0.118
+    }
   },
   {
     "origName": "Bagarmossen (Stockholm)",
     "siteId": "9141",
     "name": "Bagarmossen",
-    "lines": [17]
+    "lines": [17],
+    "pointOnPath": {
+      17: 0.072
+    }
   },
   {
     "origName": "Farsta",
@@ -832,6 +862,7 @@ export const stationsFull = [{
     "lines": [10, 11, 17, 18, 19],
     "pointOnPath": {
       11: 0.470,
+      17: 0.704,
       10: 0.369,
       18: 0.865,
       19: 0.592
@@ -1024,6 +1055,9 @@ export const stationsFull = [{
     "origName": "Skarpnäck (t-banan) (Stockholm)",
     "siteId": "9140",
     "name": "Skarpnäck",
-    "lines": [17]
+    "lines": [17],
+    "pointOnPath": {
+      17: 0
+    }
   }
 ]
