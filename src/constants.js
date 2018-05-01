@@ -114,7 +114,7 @@ export const stationsFull = [{
     "lines": [13, 14, 17, 18, 19],
     "pointOnPath": {
       18: 0.512,
-      14: 0.421
+      14: 0.421,13:0.235
     }
   },
   {
@@ -387,7 +387,8 @@ export const stationsFull = [{
       11: 0.153,
       10: 0.127,
       18: 0.591,
-      14: 0.35
+      14: 0.35,
+      13: 0.183
     }
   },
   {
@@ -397,7 +398,8 @@ export const stationsFull = [{
     "lines": [13, 14, 17, 18, 19],
     "pointOnPath": {
       18: 0.548,
-      14: 0.388
+      14: 0.388,
+      13: 0.211
     }
   },
   {
@@ -457,7 +459,7 @@ export const stationsFull = [{
     "name": "Zinkensdamm",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.65
+      14: 0.65,13:0.403
     }
   },
   {
@@ -466,7 +468,7 @@ export const stationsFull = [{
     "name": "Hornstull",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.705
+      14: 0.705,13:0.443
     }
   },
   {
@@ -475,7 +477,7 @@ export const stationsFull = [{
     "name": "Liljeholmen",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.76
+      14: 0.76,13:0.483
     }
   },
   {
@@ -502,7 +504,7 @@ export const stationsFull = [{
     "name": "Mariatorget",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.594
+      14: 0.594,13:0.362
     }
   },
   {
@@ -536,37 +538,55 @@ export const stationsFull = [{
     "origName": "Aspudden (Stockholm)",
     "siteId": "9293",
     "name": "Aspudden",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.524
+    }
   },
   {
     "origName": "Örnsberg (Stockholm)",
     "siteId": "9292",
     "name": "Örnsberg",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.564
+    }
   },
   {
     "origName": "Axelsberg (Stockholm)",
     "siteId": "9291",
     "name": "Axelsberg",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.605
+    }
   },
   {
     "origName": "Mälarhöjden (Stockholm)",
     "siteId": "9290",
     "name": "Mälarhöjden",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.663
+    }
   },
   {
     "origName": "Bredäng (Stockholm)",
     "siteId": "9289",
     "name": "Bredäng",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.697
+    }
   },
   {
     "origName": "Sätra (Stockholm)",
     "siteId": "9288",
     "name": "Sätra",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.731
+    }
   },
   {
     "origName": "Östermalmstorg (Stockholm)",
@@ -574,38 +594,54 @@ export const stationsFull = [{
     "name": "Östermalmstorg",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.288
+      14: 0.288,
+      13:0.139
     }
   },
   {
     "origName": "Karlaplan (Stockholm)",
     "siteId": "9222",
     "name": "Karlaplan",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.089
+    }
   },
   {
     "origName": "Gärdet (Stockholm)",
     "siteId": "9221",
     "name": "Gärdet",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.041
+    }
   },
   {
     "origName": "Ropsten (Stockholm)",
     "siteId": "9220",
     "name": "Ropsten",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0
+    }
   },
   {
     "origName": "Skärholmen (Stockholm)",
     "siteId": "9287",
     "name": "Skärholmen",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.764
+    }
   },
   {
     "origName": "Vårberg (Stockholm)",
     "siteId": "9286",
     "name": "Vårberg",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.798
+    }
   },
   {
     "origName": "Farsta strand (Stockholm)",
@@ -620,19 +656,28 @@ export const stationsFull = [{
     "origName": "Vårby gård (Huddinge)",
     "siteId": "9285",
     "name": "Vårby gård",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.832
+    }
   },
   {
     "origName": "Masmo (Huddinge)",
     "siteId": "9284",
     "name": "Masmo",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.865
+    }
   },
   {
     "origName": "Fittja (Botkyrka)",
     "siteId": "9283",
     "name": "Fittja",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.9
+    }
   },
   {
     "origName": "Stadion (t-banan) (Stockholm)",
@@ -665,19 +710,28 @@ export const stationsFull = [{
     "origName": "Alby (Botkyrka)",
     "siteId": "9282",
     "name": "Alby",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.932
+    }
   },
   {
     "origName": "Hallunda (Botkyrka)",
     "siteId": "9281",
     "name": "Hallunda",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 0.967
+    }
   },
   {
     "origName": "Norsborg (Botkyrka)",
     "siteId": "9280",
     "name": "Norsborg",
-    "lines": [13]
+    "lines": [13],
+    "pointOnPath": {
+      13: 1
+    }
   },
   {
     "origName": "Rådhuset (Stockholm)",
