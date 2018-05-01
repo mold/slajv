@@ -384,7 +384,7 @@ export const stationsFull = [{
     "lines": [10, 11, 13, 14, 17, 18, 19],
     "pointOnPath": {
       11: 0.153,
-      10: 0.153,
+      10: 0.127,
       18: 0.591
     }
   },
@@ -644,7 +644,7 @@ export const stationsFull = [{
     "lines": [10, 11],
     "pointOnPath": {
       11: 0.387,
-      10: 0.387,
+      10: 0.308,
       18: 0.866
     }
   },
@@ -655,7 +655,7 @@ export const stationsFull = [{
     "lines": [10, 11, 17, 18, 19],
     "pointOnPath": {
       11: 0.470,
-      10: 0.470,
+      10: 0.369,
       18: 0.865
     }
   },
@@ -666,7 +666,7 @@ export const stationsFull = [{
     "lines": [10, 11],
     "pointOnPath": {
       11: 0.549,
-      10: 0.549
+      10: 0.432
     }
   },
   {
@@ -676,7 +676,7 @@ export const stationsFull = [{
     "lines": [10, 11],
     "pointOnPath": {
       11: 0.600,
-      10: 0.600
+      10: 0.47
     }
   },
   {
@@ -710,19 +710,28 @@ export const stationsFull = [{
     "origName": "Rinkeby (Stockholm)",
     "siteId": "9322",
     "name": "Rinkeby",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.918
+    }
   },
   {
     "origName": "Tensta (Stockholm)",
     "siteId": "9321",
     "name": "Tensta",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.956
+    }
   },
   {
     "origName": "Hjulsta (Stockholm)",
     "siteId": "9320",
     "name": "Hjulsta",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 1
+    }
   },
   {
     "origName": "Kista (Stockholm)",
@@ -758,7 +767,7 @@ export const stationsFull = [{
     "lines": [10, 11],
     "pointOnPath": {
       11: 0.010,
-      10: 0.010
+      10: 0.0
     }
   },
   {
@@ -783,31 +792,46 @@ export const stationsFull = [{
     "origName": "Huvudsta (Solna)",
     "siteId": "9327",
     "name": "Huvudsta",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.582
+    }
   },
   {
     "origName": "Solna strand (Solna)",
     "siteId": "9326",
     "name": "Solna strand",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.719
+    }
   },
   {
     "origName": "Sundbybergs centrum (Sundbyberg)",
     "siteId": "9325",
     "name": "Sundbybergs centrum",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.772
+    }
   },
   {
     "origName": "Duvbo (Sundbyberg)",
     "siteId": "9324",
     "name": "Duvbo",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.821
+    }
   },
   {
     "origName": "Rissne (Sundbyberg)",
     "siteId": "9323",
     "name": "Rissne",
-    "lines": [10]
+    "lines": [10],
+    "pointOnPath": {
+      10: 0.87
+    }
   },
   {
     "origName": "Skarpnäck (t-banan) (Stockholm)",
