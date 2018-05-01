@@ -113,7 +113,8 @@ export const stationsFull = [{
     "name": "Slussen",
     "lines": [13, 14, 17, 18, 19],
     "pointOnPath": {
-      18: 0.512
+      18: 0.512,
+      14: 0.421
     }
   },
   {
@@ -385,7 +386,8 @@ export const stationsFull = [{
     "pointOnPath": {
       11: 0.153,
       10: 0.127,
-      18: 0.591
+      18: 0.591,
+      14: 0.35
     }
   },
   {
@@ -394,7 +396,8 @@ export const stationsFull = [{
     "name": "Gamla stan",
     "lines": [13, 14, 17, 18, 19],
     "pointOnPath": {
-      18: 0.548
+      18: 0.548,
+      14: 0.388
     }
   },
   {
@@ -452,55 +455,82 @@ export const stationsFull = [{
     "origName": "Zinkensdamm (Stockholm)",
     "siteId": "9296",
     "name": "Zinkensdamm",
-    "lines": [13, 14]
+    "lines": [13, 14],
+    "pointOnPath": {
+      14: 0.65
+    }
   },
   {
     "origName": "Hornstull (Stockholm)",
     "siteId": "9295",
     "name": "Hornstull",
-    "lines": [13, 14]
+    "lines": [13, 14],
+    "pointOnPath": {
+      14: 0.705
+    }
   },
   {
     "origName": "Liljeholmen (Stockholm)",
     "siteId": "9294",
     "name": "Liljeholmen",
-    "lines": [13, 14]
+    "lines": [13, 14],
+    "pointOnPath": {
+      14: 0.76
+    }
   },
   {
     "origName": "Midsommarkransen (Stockholm)",
     "siteId": "9264",
     "name": "Midsommarkransen",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.818
+    }
   },
   {
     "origName": "Telefonplan (Stockholm)",
     "siteId": "9263",
     "name": "Telefonplan",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.863
+    }
   },
   {
     "origName": "Mariatorget (t-banan) (Stockholm)",
     "siteId": "9297",
     "name": "Mariatorget",
-    "lines": [13, 14]
+    "lines": [13, 14],
+    "pointOnPath": {
+      14: 0.594
+    }
   },
   {
     "origName": "Hägerstensåsen (t-banan) (Stockholm)",
     "siteId": "9262",
     "name": "Hägerstensåsen",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.909
+    }
   },
   {
     "origName": "Västertorp (Stockholm)",
     "siteId": "9261",
     "name": "Västertorp",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.955
+    }
   },
   {
     "origName": "Fruängen (Stockholm)",
     "siteId": "9260",
     "name": "Fruängen",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 1
+    }
   },
   {
     "origName": "Aspudden (Stockholm)",
@@ -542,7 +572,10 @@ export const stationsFull = [{
     "origName": "Östermalmstorg (Stockholm)",
     "siteId": "9206",
     "name": "Östermalmstorg",
-    "lines": [13, 14]
+    "lines": [13, 14],
+    "pointOnPath": {
+      14: 0.288
+    }
   },
   {
     "origName": "Karlaplan (Stockholm)",
@@ -605,19 +638,28 @@ export const stationsFull = [{
     "origName": "Stadion (t-banan) (Stockholm)",
     "siteId": "9205",
     "name": "Stadion",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.19
+    }
   },
   {
     "origName": "Tekniska högskolan (Stockholm)",
     "siteId": "9204",
     "name": "Tekniska högskolan",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.148
+    }
   },
   {
     "origName": "Universitetet (Stockholm)",
     "siteId": "9203",
     "name": "Universitetet",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.105
+    }
   },
   {
     "origName": "Alby (Botkyrka)",
@@ -774,19 +816,28 @@ export const stationsFull = [{
     "origName": "Bergshamra (Solna)",
     "siteId": "9202",
     "name": "Bergshamra",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.069
+    }
   },
   {
     "origName": "Danderyds sjukhus (Danderyd)",
     "siteId": "9201",
     "name": "Danderyds sjukhus",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0.033
+    }
   },
   {
     "origName": "Mörby centrum (Danderyd)",
     "siteId": "9200",
     "name": "Mörby centrum",
-    "lines": [14]
+    "lines": [14],
+    "pointOnPath": {
+      14: 0
+    }
   },
   {
     "origName": "Huvudsta (Solna)",
