@@ -1,43 +1,50 @@
-.hello {
-  color: red;
-}
-
 svg {
 	font-size: 12px;
 }
 
 text {
-	font-size: 1em;
-	font-family: "Gudea", sans-serif;
-	font-weight: bold;
-    cursor: pointer;
-    user-select:none;
+  font-size: 1em;
+  font-family: "Gudea", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
 
-	&:hover{
-		font-size:1.1em;
-	}
+  &:hover {
+    font-size: 1.1em;
+  }
 }
 
-.slanted-bottom,.align-right {
-    text-anchor:end;
-    text-align:end;
-}
+.align-right,
 .slanted-bottom {
-    font-size:1em;
+	text-anchor: end;
+	text-align: end;
+}
+
+.slanted-bottom {
+	font-size: 1em;
 }
 
 .end-station {
 	font-size: 1.1em;
 }
 
-.slider-container{
-	position: absolute;
-	top:0;
-	left:0;
+.slider-container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 	padding: 1em;
 }
 
-.along-slider{
-	width:800px;
+.along-slider {
+	width: 100%;
 }
 
+.train-div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 7px;
+	height: 7px;
+	background: black;
+}

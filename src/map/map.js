@@ -50,10 +50,58 @@ function nameToClass(name) {
   return "name-" + name.toLowerCase().replace(/\s/g, "-");
 }
 
+
+window.line = 18;
+
+function setup() {
+
+	const sliderEl = $(".along-slider");
+	const sliderValEl = $(".along-slider-val");
+	const circle = $("#train-circle");
+
+	sliderEl.on('mousemove', function() {
+    const path = $("#path-train--line-"+window.line);
+    const pathSnap = Snap("#path-train--line-"+window.line);
+		sliderValEl.val(this.value);
+		const distOnPath = this.value / 1000 * path[0].getTotalLength();
+		const pointAtLength = pathSnap.getPointAtLength(distOnPath);
+
+		const pointInSvg = {
+			x: path.position().top - $(path[0].ownerSVGElement).position().top,
+			y: path.position().left - $(path[0].ownerSVGElement).position().left,
+		}
+
+		Snap(circle[0]).transform('t' + pointAtLength.x + ',' + pointAtLength.y + 'r' + pointAtLength.alpha)
+
+	});
+
+  sliderEl.on("mouseup", function(){
+    console.log(this.value/1000)
+  })
+
+  $("text").click(function(evt) {
+	const station = stationsFull.find(stn => $(this).hasClass(nameToClass(stn.name)));
+
+	console.log(station)
+
+  moveTrainCircle(window.line, 1, station.name, station.name, 1);
+
+	// console.log(stationsFull)
+})
+
+
+}
+
+function nameToClass(name) {
+	return "name-" + name.toLowerCase().replace(/\s/g, "-");
+}
+
+
 $(() => {
   fetch(map).then(res => {
     res.text().then(html => {
       $(".svg-container").html(html);
+      setup();
     })
   });
 })

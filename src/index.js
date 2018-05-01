@@ -34,9 +34,9 @@ function getStationsOnSpecificLine(lineNumber, constantStations) {
     })
 }
 
-let line11 = getStationsOnSpecificLine(11, stationsFull);
+// let line11 = getStationsOnSpecificLine(11, stationsFull);
 
-line11.then(trains => {
+false && line11.then(trains => {
   console.log("Number of trains: ", trains.length);
   console.log("trains: ", trains);
 
