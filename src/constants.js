@@ -114,7 +114,9 @@ export const stationsFull = [{
     "lines": [13, 14, 17, 18, 19],
     "pointOnPath": {
       18: 0.512,
-      14: 0.421,13:0.235
+      14: 0.421,
+      13: 0.235,
+      19: 0.385
     }
   },
   {
@@ -123,7 +125,8 @@ export const stationsFull = [{
     "name": "Medborgarplatsen",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.476
+      18: 0.476,
+      19: 0.364
     }
   },
   {
@@ -132,7 +135,8 @@ export const stationsFull = [{
     "name": "Skanstull",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.439
+      18: 0.439,
+      19: 0.343
     }
   },
   {
@@ -141,7 +145,8 @@ export const stationsFull = [{
     "name": "Gullmarsplan",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.404
+      18: 0.404,
+      19: 0.323
     }
   },
   {
@@ -211,31 +216,46 @@ export const stationsFull = [{
     "origName": "Globen (Stockholm)",
     "siteId": "9168",
     "name": "Globen",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.247
+    }
   },
   {
     "origName": "Enskede gård (Stockholm)",
     "siteId": "9167",
     "name": "Enskede gård",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.214
+    }
   },
   {
     "origName": "Sockenplan (Stockholm)",
     "siteId": "9166",
     "name": "Sockenplan",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.176
+    }
   },
   {
     "origName": "Svedmyra (Stockholm)",
     "siteId": "9165",
     "name": "Svedmyra",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.148
+    }
   },
   {
     "origName": "Stureby (Stockholm)",
     "siteId": "9164",
     "name": "Stureby",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.118
+    }
   },
   {
     "origName": "Hötorget (Stockholm)",
@@ -243,7 +263,8 @@ export const stationsFull = [{
     "name": "Hötorget",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.681
+      18: 0.681,
+      19: 0.484
     }
   },
   {
@@ -252,7 +273,8 @@ export const stationsFull = [{
     "name": "Rådmansgatan",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.724
+      18: 0.724,
+      19: 0.509
     }
   },
   {
@@ -261,7 +283,8 @@ export const stationsFull = [{
     "name": "Odenplan",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.772
+      18: 0.772,
+      19: 0.536
     }
   },
   {
@@ -271,6 +294,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.817,
+      19: 0.563,
     }
   },
   {
@@ -279,7 +303,8 @@ export const stationsFull = [{
     "name": "Thorildsplan",
     "lines": [17, 18, 19],
     "pointOnPath": {
-      18: 0.905
+      18: 0.905,
+      19: 0.614
     }
   },
   {
@@ -289,6 +314,7 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.952,
+      19: 0.642,
     }
   },
   {
@@ -298,85 +324,125 @@ export const stationsFull = [{
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 1,
+      19: 0.67
     }
   },
   {
     "origName": "Stora mossen (Stockholm)",
     "siteId": "9111",
     "name": "Stora mossen",
-    "lines": [17, 19]
+    "lines": [17, 19],
+    "pointOnPath": {
+      19: 0.697
+    }
   },
   {
     "origName": "Abrahamsberg (Stockholm)",
     "siteId": "9110",
     "name": "Abrahamsberg",
-    "lines": [17, 19]
+    "lines": [17, 19],
+    "pointOnPath": {
+      19: 0.725
+    }
   },
   {
     "origName": "Brommaplan (Stockholm)",
     "siteId": "9109",
     "name": "Brommaplan",
-    "lines": [17, 19]
+    "lines": [17, 19],
+    "pointOnPath": {
+      19: 0.752,
+    }
   },
   {
     "origName": "Åkeshov (Stockholm)",
     "siteId": "9108",
     "name": "Åkeshov",
-    "lines": [17, 19]
+    "lines": [17, 19],
+    "pointOnPath": {
+      19: 0.78
+    }
   },
   {
     "origName": "Ängbyplan (Stockholm)",
     "siteId": "9107",
     "name": "Ängbyplan",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.807
+    }
   },
   {
     "origName": "Islandstorget (Stockholm)",
     "siteId": "9106",
     "name": "Islandstorget",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.834
+    }
   },
   {
     "origName": "Blackeberg (Stockholm)",
     "siteId": "9105",
     "name": "Blackeberg",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.861
+    }
   },
   {
     "origName": "Råcksta (Stockholm)",
     "siteId": "9104",
     "name": "Råcksta",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.889
+    }
   },
   {
     "origName": "Vällingby (Stockholm)",
     "siteId": "9103",
     "name": "Vällingby",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.917
+    }
   },
   {
     "origName": "Bandhagen (Stockholm)",
     "siteId": "9163",
     "name": "Bandhagen",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.088
+    }
   },
   {
     "origName": "Högdalen (Stockholm)",
     "siteId": "9162",
     "name": "Högdalen",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.058
+    }
   },
   {
     "origName": "Johannelund (Stockholm)",
     "siteId": "9102",
     "name": "Johannelund",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.944
+    }
   },
   {
     "origName": "Hässelby gård (Stockholm)",
     "siteId": "9101",
     "name": "Hässelby gård",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.971
+    }
   },
   {
     "origName": "T-Centralen (Stockholm)",
@@ -388,7 +454,8 @@ export const stationsFull = [{
       10: 0.127,
       18: 0.591,
       14: 0.35,
-      13: 0.183
+      13: 0.183,
+      19: 0.431
     }
   },
   {
@@ -399,7 +466,8 @@ export const stationsFull = [{
     "pointOnPath": {
       18: 0.548,
       14: 0.388,
-      13: 0.211
+      13: 0.211,
+      19: 0.406
     }
   },
   {
@@ -439,19 +507,28 @@ export const stationsFull = [{
     "origName": "Hässelby strand (Stockholm)",
     "siteId": "9100",
     "name": "Hässelby strand",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 1
+    }
   },
   {
     "origName": "Rågsved (Stockholm)",
     "siteId": "9161",
     "name": "Rågsved",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0.028
+    }
   },
   {
     "origName": "Hagsätra (Stockholm)",
     "siteId": "9160",
     "name": "Hagsätra",
-    "lines": [19]
+    "lines": [19],
+    "pointOnPath": {
+      19: 0
+    }
   },
   {
     "origName": "Zinkensdamm (Stockholm)",
@@ -459,7 +536,8 @@ export const stationsFull = [{
     "name": "Zinkensdamm",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.65,13:0.403
+      14: 0.65,
+      13: 0.403
     }
   },
   {
@@ -468,7 +546,8 @@ export const stationsFull = [{
     "name": "Hornstull",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.705,13:0.443
+      14: 0.705,
+      13: 0.443
     }
   },
   {
@@ -477,7 +556,8 @@ export const stationsFull = [{
     "name": "Liljeholmen",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.76,13:0.483
+      14: 0.76,
+      13: 0.483
     }
   },
   {
@@ -504,7 +584,8 @@ export const stationsFull = [{
     "name": "Mariatorget",
     "lines": [13, 14],
     "pointOnPath": {
-      14: 0.594,13:0.362
+      14: 0.594,
+      13: 0.362
     }
   },
   {
@@ -595,7 +676,7 @@ export const stationsFull = [{
     "lines": [13, 14],
     "pointOnPath": {
       14: 0.288,
-      13:0.139
+      13: 0.139
     }
   },
   {
@@ -752,7 +833,8 @@ export const stationsFull = [{
     "pointOnPath": {
       11: 0.470,
       10: 0.369,
-      18: 0.865
+      18: 0.865,
+      19: 0.592
     }
   },
   {
