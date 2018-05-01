@@ -1,109 +1,129 @@
 import {
-    getStationTrains,
-    getSiteId
+  getStationTrains,
+  getSiteId
 } from './functions';
-import './index.scss';
+// import './index.scss';
 import {
-    stations,
-    stationsFull
+  stations,
+  stationsFull
 } from './constants.js';
-import {moveTrainCircle, removeTrainCircle} from "./map/map.js";
+import {
+  moveTrainCircle,
+  removeTrainCircle
+} from "./map/map.js";
 import moment from "moment";
-import "./map/style.scss"
+// import "./map/style.scss"
 
 function getStationsOnSpecificLine(lineNumber, constantStations) {
-    let line = constantStations.filter(station => station.lines.includes(lineNumber));
-    let promiseArr = line.map(station => getStationTrains(station.siteId));
+  let line = constantStations.filter(station => station.lines.includes(lineNumber));
+  let promiseArr = line.map(station => getStationTrains(station.siteId));
 
-    return Promise.all(promiseArr).then(stations => {
-      var filteredStations = _.flatten(stations).filter(station => station.LineNumber == lineNumber.toString());
+  return Promise.all(promiseArr).then(stations => {
+    var filteredStations = _.flatten(stations).filter(station => station.LineNumber == lineNumber.toString());
 
-      filteredStations = filteredStations.map(station => {
-        station.expectedMilliseconds = moment(station.ExpectedDateTime).valueOf();
-        return station;
-      });
+    filteredStations = filteredStations.map(station => {
+      station.expectedMilliseconds = moment(station.ExpectedDateTime).valueOf();
+      return station;
+    });
 
-      var uniqueTrains = _.uniqBy(filteredStations, "JourneyNumber");
-      var uniqueJurneyNumbers = uniqueTrains.map(train => train.JourneyNumber);
+    var uniqueTrains = _.uniqBy(filteredStations, "JourneyNumber");
+    var uniqueJurneyNumbers = uniqueTrains.map(train => train.JourneyNumber);
 
-      var functionOutput = [];
-      uniqueJurneyNumbers.forEach(journeyNumber => {
-        functionOutput.push(filteredStations.filter(train => train.JourneyNumber === journeyNumber));
-      });
-      return functionOutput;
-    })
+    var functionOutput = [];
+    uniqueJurneyNumbers.forEach(journeyNumber => {
+      functionOutput.push(filteredStations.filter(train => train.JourneyNumber === journeyNumber));
+    });
+    return functionOutput;
+  })
 }
+
+let lines = [10, 11, 19, 17, 18, 13, 14].map(ln => ({
+  line: ln,
+  trains: getStationsOnSpecificLine(ln, stationsFull)
+}));
+
 
 // let line11 = getStationsOnSpecificLine(11, stationsFull);
 
-false && line11.then(trains => {
-  console.log("Number of trains: ", trains.length);
-  console.log("trains: ", trains);
+lines.forEach(lineObj => {
+  lineObj.trains.then(trains => {
+    console.log("Number of trains: ", trains.length);
+    console.log("trains: ", trains);
 
-  let trainsIntransit = [];
+    let trainsIntransit = [];
 
-  var myVar = setInterval(myTimer, 1000);
-  function myTimer() {
-    let timeStamp = moment().valueOf(); // used for determining if a train has stopped at the last station on the line
+    var myVar = setInterval(myTimer, 1000);
 
-    trains.forEach(stationArray => { // loop through all the trains stations
-      let temp = _.orderBy(stationArray, ['expectedMilliseconds'],['asc']);
+    function myTimer() {
+      let timeStamp = moment().valueOf(); // used for determining if a train has stopped at the last station on the line
 
-      let passedStations = temp.filter(train => train.expectedMilliseconds < moment().valueOf()); // stations already passed by the train
-      let lastPassedStation = passedStations[passedStations.length - 1]; // last station
+      trains.forEach(stationArray => { // loop through all the trains stations
+        let temp = _.orderBy(stationArray, ['expectedMilliseconds'], ['asc']);
 
-      let comingStations = temp.filter(train => train.expectedMilliseconds > moment().valueOf()); // stations already passed by the train
+        let passedStations = temp.filter(train => train.expectedMilliseconds < moment().valueOf()); // stations already passed by the train
+        let lastPassedStation = passedStations[passedStations.length - 1]; // last station
 
-      if (lastPassedStation && comingStations.length > 0) { // the current train is between two stations
-        let stationTimeDifference = comingStations[0].expectedMilliseconds - lastPassedStation.expectedMilliseconds;
-        let timeUntilStation = comingStations[0].expectedMilliseconds - moment().valueOf();
-        let progress = 100*(1-(timeUntilStation/stationTimeDifference));
+        let comingStations = temp.filter(train => train.expectedMilliseconds > moment().valueOf()); // stations already passed by the train
 
-        var index = _.findIndex(trainsIntransit, {journeyNumber: comingStations[0].JourneyNumber});
-        let trainToAdd = {timeStamp: timeStamp, journeyNumber: comingStations[0].JourneyNumber, from: lastPassedStation.StopAreaName, to: comingStations[0].StopAreaName, progress: progress};
+        if (lastPassedStation && comingStations.length > 0) { // the current train is between two stations
+          let stationTimeDifference = comingStations[0].expectedMilliseconds - lastPassedStation.expectedMilliseconds;
+          let timeUntilStation = comingStations[0].expectedMilliseconds - moment().valueOf();
+          let progress = 100 * (1 - (timeUntilStation / stationTimeDifference));
 
-        // Add/modify the current train to/in the output array
-        if (index >= 0) { // train already exists in array
-          trainsIntransit.splice(index, 1, trainToAdd);
-        } else { // new train
-          trainsIntransit.push(trainToAdd);
+          var index = _.findIndex(trainsIntransit, {
+            journeyNumber: comingStations[0].JourneyNumber
+          });
+          let trainToAdd = {
+            timeStamp: timeStamp,
+            journeyNumber: comingStations[0].JourneyNumber,
+            from: lastPassedStation.StopAreaName,
+            to: comingStations[0].StopAreaName,
+            progress: progress
+          };
+
+          // Add/modify the current train to/in the output array
+          if (index >= 0) { // train already exists in array
+            trainsIntransit.splice(index, 1, trainToAdd);
+          } else { // new train
+            trainsIntransit.push(trainToAdd);
+          }
+
+          moveTrainCircle(lineObj.line, trainToAdd.journeyNumber, trainToAdd.from, trainToAdd.to, progress);
+
+          /* The stations for trains in the array "trainsIntransit" will be
+           * overwritten by new stations ass the tranin passes the current
+           * station.
+           *
+           * In the case that the api has not provided information of another
+           * station where the specific train will depart from, the train object
+           * will have a ".progress" which is <= 100%. This case has to be
+           * handled for "end stations". Other cases should automatically work
+           * if the api continously is called and provides information on stations.
+           */
+
+
+
+          // console.log("From: " + lastPassedStation.StopAreaName + " To: " + comingStations[0].StopAreaName + " Progress: " + progress + "%");
+          // console.log("From: " + moment(lastPassedStation.expectedMilliseconds).format("DD MMM YYYY hh:mm a") + " To: " + moment(comingStations[0].expectedMilliseconds).format("DD MMM YYYY hh:mm a"));
         }
+      })
 
-        moveTrainCircle(11, trainToAdd.journeyNumber, trainToAdd.from, trainToAdd.to, progress);
+      if (trainsIntransit.length > 1) { // naïve and flawed fix for the problem stated above.
+        let temp = trainsIntransit.filter(train => {
+          let keep = train.timeStamp === (_.maxBy(trainsIntransit, 'timeStamp')).timeStamp;
+          if (!keep) {
+            removeTrainCircle(train.journeyNumber);
+          }
 
-        /* The stations for trains in the array "trainsIntransit" will be
-         * overwritten by new stations ass the tranin passes the current
-         * station.
-         *
-         * In the case that the api has not provided information of another
-         * station where the specific train will depart from, the train object
-         * will have a ".progress" which is <= 100%. This case has to be
-         * handled for "end stations". Other cases should automatically work
-         * if the api continously is called and provides information on stations.
-         */
-
-
-
-        // console.log("From: " + lastPassedStation.StopAreaName + " To: " + comingStations[0].StopAreaName + " Progress: " + progress + "%");
-        // console.log("From: " + moment(lastPassedStation.expectedMilliseconds).format("DD MMM YYYY hh:mm a") + " To: " + moment(comingStations[0].expectedMilliseconds).format("DD MMM YYYY hh:mm a"));
+          return keep;
+        });
+        console.log(temp);
       }
-    })
-
-    if (trainsIntransit.length > 1) { // naïve and flawed fix for the problem stated above.
-      let temp = trainsIntransit.filter(train =>{
-        let keep = train.timeStamp === (_.maxBy(trainsIntransit, 'timeStamp')).timeStamp;
-        if(!keep){
-          removeTrainCircle(train.journeyNumber);
-        }
-
-        return keep;
-      });
-      console.log(temp);
     }
-  }
 
-});
+  });
 
+})
 
 // line11.then(trains => {
 //   console.log("Number of trains: ", trains.length);

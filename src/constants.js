@@ -298,7 +298,7 @@ export const stationsFull = [{
   {
     "origName": "Sankt Eriksplan (Stockholm)",
     "siteId": "9116",
-    "name": "Sankt Eriksplan",
+    "name": "S:t Eriksplan",
     "lines": [17, 18, 19],
     "pointOnPath": {
       18: 0.817,

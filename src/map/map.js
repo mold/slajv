@@ -27,8 +27,13 @@ export function moveTrainCircle(lineNumber, journeyNumber, fromStation, toStatio
 
   const pathSnap = Snap("#path-train--line-" + lineNumber);
 
+  let fromstn=fromStation,tostn=toStation;
   fromStation = stationsFull.find(stn => stn.name === fromStation);
   toStation = stationsFull.find(stn => stn.name === toStation);
+
+  if(!fromStation || !toStation){
+    console.log("Couldn't find stations:",fromstn,tostn)
+  }
 
   const distOnPath = toStation.pointOnPath[lineNumber] - (progress / 100) * (toStation.pointOnPath[lineNumber] - fromStation.pointOnPath[lineNumber]);
   const pointAtLength = pathSnap.getPointAtLength(distOnPath * pathSnap.getTotalLength());
@@ -93,7 +98,7 @@ function setup() {
 }
 
 function nameToClass(name) {
-	return "name-" + name.toLowerCase().replace(/\s/g, "-");
+	return "name-" + name.toLowerCase().replace(/\s/g, "-").replace(":","");
 }
 
 
