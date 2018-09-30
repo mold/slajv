@@ -5,58 +5,93 @@ import {
 
 let trainimations = {
   0: {
-    prevProgress: 0.2,
-    nextProgress: 0.5,
-    animProgress: 0.7,
+    startTime: 0,
+    elapsedTime: 0,
+    duration: 0,
+    startDistOnPath: 0,
+    targetDistOnPath: 0,
     trainDiv: null,
     trainSvg: null,
     pathSnap: null,
-    start: null,
+    journeyNumber: 0,
   }
 };
+let track;
 
-function tweenTrainCircle(trainDiv, trainSvg, pathSnap, journeyNumber, to, duration) {
+function tweenTrainCircle(
+  trainDiv,
+  trainSvg,
+  pathSnap,
+  journeyNumber,
+  to,
+  duration,
+) {
+  // if (!track) track = journeyNumber;
+
+  // if (journeyNumber !== track) return;
+
   var start;
 
-  if (!trainimations.journeyNumber) {
-    trainimations.journeyNumber = {};
+  if (!trainimations[journeyNumber]) {
+    // first time, no animation bruv
+
+
+    const ta = trainimations[journeyNumber] = {
+      startTime: performance.now(),
+      elapsedTime: 0,
+      duration,
+      startDistOnPath: to,
+      targetDistOnPath: to,
+      trainDiv,
+      trainSvg,
+      pathSnap,
+      journeyNumber,
+    };
+
+    // console.log("first time:", ta, _getDistOnPath(ta));
+    positionCircle(ta.trainDiv, ta.trainSvg, ta.pathSnap, _getDistOnPath(ta));
+
+    return;
   }
 
-  var ta = trainimations.journeyNumber;
-  ta.prevProgress = ta.nextProgress;
-  ta.nextProgress = to;
-  ta.start = null;
+  const trainimation = trainimations[journeyNumber];
 
-  function step(endPoint, timestamp) {
-    // let ta = trainimations.journeyNumber;
+  Object.assign(trainimation, {
+    // set start to current position
+    startDistOnPath: _getDistOnPath(trainimation),
+    targetDistOnPath: to,
+    duration,
+    elapsedTime: 0,
+    startTime: performance.now(),
+  });
 
-    if (!ta.prevProgress) {
-      ta.prevProgress = endPoint;
-      positionCircle(ta.trainDiv, ta.trainSvg, ta.pathSnap, ta.prevProgress);
-      return;
+  // console.log("start moving:", trainimation, _getDistOnPath(trainimation));
+
+  // console.log("trainimations:", trainimations);
+
+  window.requestAnimationFrame(step.bind(this, trainimation));
+
+  function step(_ta, timestamp) {
+    _ta.elapsedTime = Math.min(timestamp - _ta.startTime, _ta.duration);
+
+    positionCircle(_ta.trainDiv, _ta.trainSvg, _ta.pathSnap, _getDistOnPath(_ta));
+
+    if (_ta.elapsedTime < _ta.duration) {
+      return window.requestAnimationFrame(step.bind(this, _ta));
     }
 
-    if (!start) {
-      start = timestamp;
-    }
-
-    var progress = (timestamp - start) / duration;
-
-    // console.log("progress", progress)
-    //
-    // console.log("interpolate progres", interpolate(progress))
-
-    positionCircle(ta.trainDiv, ta.trainSvg, ta.pathSnap, ta.prevProgress);
-
-
-    moveCircle(prevStop + interpolate(progress) * (endPoint - prevStop));
-
-    window.requestAnimationFrame(step.bind(this, endPoint));
-    prevStop = endPoint;
-    start = null;
+    // console.log("done moving:", _ta, _getDistOnPath(_ta));
   }
 };
 
+function _getDistOnPath({
+  duration,
+  elapsedTime,
+  startDistOnPath,
+  targetDistOnPath
+}) {
+  return startDistOnPath + (targetDistOnPath - startDistOnPath) * (elapsedTime / duration);
+}
 
 function positionCircle(trainDiv, trainSvg, pathSnap, distOnPath) {
   const pointAtLength = pathSnap.getPointAtLength(distOnPath * pathSnap.getTotalLength());
@@ -69,7 +104,7 @@ function positionCircle(trainDiv, trainSvg, pathSnap, distOnPath) {
   });
 }
 
-export function moveTrainCircle(lineNumber, journeyNumber, fromStation, toStation, progress) {
+export function moveTrainCircle(lineNumber, journeyNumber, fromStation, toStation, progress, animationDuration) {
   var trainDiv = $("#train-div-" + journeyNumber);
   var trainSvg = $("#train-tracer-" + journeyNumber)[0];
 
@@ -103,7 +138,13 @@ export function moveTrainCircle(lineNumber, journeyNumber, fromStation, toStatio
   }
 
   const distOnPath = toStation.pointOnPath[lineNumber] - (progress / 100) * (toStation.pointOnPath[lineNumber] - fromStation.pointOnPath[lineNumber]);
-  positionCircle(trainDiv, trainSvg, pathSnap, distOnPath);
+
+  if (animationDuration) {
+    tweenTrainCircle(trainDiv, trainSvg, pathSnap, journeyNumber, distOnPath, animationDuration);
+  } else {
+    positionCircle(trainDiv, trainSvg, pathSnap, distOnPath);
+
+  }
 }
 
 export function removeTrainCircle(journeyNumber) {
