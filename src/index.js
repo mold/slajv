@@ -3,11 +3,16 @@ import {
   moveTrainCircle,
   removeTrainCircle
 } from "./map/map.js";
+import _ from "lodash";
 
+
+window.moment=moment;
 // todo: fetch from s3
-const fetchPromise = Promise.resolve([]);
+const fetchPromise = fetch("https://s3-eu-west-1.amazonaws.com/www.tbanan.se/lines.json").then(r => r.json());
 
 fetchPromise.then(lines => {
+  console.log(lines)
+  
   lines.forEach(lineObj => {
     const trains = lineObj.trains;
 
@@ -18,13 +23,13 @@ fetchPromise.then(lines => {
 
     const intervalTime = 1000;
     var myVar = setInterval(myTimer, intervalTime);
-
     function myTimer() {
       let timeStamp = moment().valueOf(); // used for determining if a train has stopped at the last station on the line
 
       trains.forEach(stationArray => { // loop through all the trains stations
+        stationArray.forEach(train => train.expectedMilliseconds = moment(train.ExpectedDateTime).valueOf())
+        
         let temp = _.orderBy(stationArray, ['expectedMilliseconds'], ['asc']);
-
         let passedStations = temp.filter(train => train.expectedMilliseconds < moment().valueOf()); // stations already passed by the train
         let lastPassedStation = passedStations[passedStations.length - 1]; // last station
 
@@ -92,7 +97,7 @@ fetchPromise.then(lines => {
         console.log(temp);
       }
     }
-
+    
   });
 
 });
