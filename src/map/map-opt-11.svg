@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg446"
+   width="729.92047"
+   height="176.8053"
+   version="1.1"
+   viewBox="0 0 729.92045 176.8053"
+   xml:space="preserve"
+   sodipodi:docname="map-opt-11.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   id="namedview4848"
+   showgrid="false"
+   inkscape:zoom="1.4142136"
+   inkscape:cx="160.78856"
+   inkscape:cy="10.431515"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg446"
+   showguides="true"
+   inkscape:guide-bbox="true"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:snap-others="false" />
+<style
+   id="1">
+.slanted-bottom,.align-right {
+    text-anchor:end;
+    text-align:end;
+}
+.slanted-bottom {
+    font-size:1em;
+}
+.end-station {
+  font-size: 1.1em;
+}
+</style>
+<metadata
+   id="metadata452"><rdf:rdf><cc:work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:work></rdf:rdf><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs450"><clipPath
+   id="clipPath474"><path
+     id="path472"
+     d="M 0,963.78 H 1190.55 V 0 H 0 Z"
+     inkscape:connector-curvature="0" /></clipPath>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</defs><g
+   transform="matrix(1.3333,0,0,-1.3562735,605.33763,163.43243)"
+   id="g622"><path
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#008dd0;stroke-width:7.77799988"
+     d="m 0.37500938,-0.27492076 c -26.23046038,0 -416.19058938,0 -438.27785938,0"
+     id="path-train--line-11" /></g><g
+   id="g4717"><g
+     transform="matrix(1.3333,0,0,-1.3562735,-604.53422,1387.2605)"
+     id="g4381"><g
+       id="g1018"
+       transform="translate(482.58,892.53)"><path
+         id="path1020"
+         d="m 0,0 h -26.589 c -1.425,0 -2.579,1.155 -2.579,2.579 v 14.684 c 0,1.425 1.154,2.58 2.579,2.58 H 0 c 1.425,0 2.579,-1.155 2.579,-2.58 V 2.579 C 2.579,1.155 1.425,0 0,0"
+         style="fill:#008dd0"
+         inkscape:connector-curvature="0" /></g><g
+       id="g1022"
+       transform="translate(462.63,896.74)"><path
+         id="path1024"
+         d="m 0,0 v 1.739 h 2.173 v 7.76 l -2.415,-1.61 v 2.028 l 2.48,1.9 H 4.347 V 1.739 H 6.198 V 0 Z"
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0" /></g><g
+       id="g1026"
+       transform="translate(470.33,896.74)"><path
+         id="path1028"
+         d="m 0,0 v 1.739 h 2.173 v 7.76 l -2.415,-1.61 v 2.028 l 2.48,1.9 H 4.347 V 1.739 H 6.198 V 0 Z"
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0" /></g></g><text
+     xml:space="preserve"
+     style="font-size:17.75053787px;stroke-width:1.34473765"
+     y="112.354"
+     x="-84.38443"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="end-station name-akalla"
+     id="text9915-4"><tspan
+       style="stroke-width:1.34473765"
+       y="112.354"
+       x="-84.38443"
+       id="tspan9913-3">AKALLA</tspan></text>
+</g><g
+   id="g4800"><g
+     id="g4789"><g
+       id="g1006"
+       transform="matrix(1.3333,0,0,-1.3562735,611.87073,176.80529)"><path
+         id="path1008"
+         d="m 0,0 h -26.59 c -1.425,0 -2.58,1.155 -2.58,2.579 v 14.684 c 0,1.425 1.155,2.58 2.58,2.58 H 0 c 1.424,0 2.578,-1.155 2.578,-2.58 V 2.579 C 2.578,1.155 1.424,0 0,0"
+         style="fill:#008dd0"
+         inkscape:connector-curvature="0" /></g><g
+       id="g1034"
+       transform="matrix(1.3333,0,0,-1.3562735,584.67093,171.09538)"><path
+         id="path1036"
+         d="m 0,0 v 1.738 h 2.174 v 7.761 l -2.415,-1.61 v 2.028 l 2.479,1.9 H 4.347 V 1.738 H 6.199 V 0 Z"
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0" /></g><g
+       id="g1038"
+       transform="matrix(1.3333,0,0,-1.3562735,594.93763,171.09538)"><path
+         id="path1040"
+         d="m 0,0 v 1.738 h 2.175 v 7.761 l -2.416,-1.61 v 2.028 l 2.479,1.9 h 2.11 V 1.738 H 6.199 V 0 Z"
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0" /></g></g><text
+     xml:space="preserve"
+     style="font-size:17.75053787px;stroke-width:1.34473765"
+     y="527.02948"
+     x="328.68799"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="end-station name-kungsträdgården"
+     id="text9915-4-7-14"><tspan
+       style="stroke-width:1.34473765"
+       y="527.02948"
+       x="328.68799"
+       id="tspan9913-3-2-4">KUNGSTRÄDGÅRDEN</tspan></text>
+</g><g
+   id="g4723"><text
+     style="font-size:16.13685226px;stroke-width:1.34473765"
+     xml:space="preserve"
+     y="161.95522"
+     x="-50.250004"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="name-husby"
+     id="text9915-3-2"><tspan
+       style="stroke-width:1.34473765"
+       y="161.95522"
+       x="-50.250004"
+       id="tspan9913-5-2">Husby</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416"
+     transform="matrix(1.3333,0,0,-1.3562735,41.65677,165.28149)"><path
+       id="path4414"
+       d="m 24.30744,0.9281 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 1.106,0 2.002,-0.897 2.002,-2.003"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4736"><text
+     style="font-size:16.13685226px;stroke-width:1.34473765"
+     xml:space="preserve"
+     y="236.54999"
+     x="24.343889"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="name-hallonbergen"
+     id="text9915-3-2-2"><tspan
+       style="stroke-width:1.34473765"
+       y="236.54999"
+       x="24.343889"
+       id="tspan9913-5-2-0">Hallonbergen</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416-4"
+     transform="matrix(1.3333,0,0,-1.3562735,178.23421,164.02273)"><path
+       id="path4414-1"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4730"><g
+     id="g23939"
+     transform="matrix(1.3333,0,0,-1.3562735,-614.4343,1261.7282)"><text
+   id="text9915-3-2-7"
+   class="name-kista"
+   transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,0,0)"
+   x="973.83655"
+   y="-183.9883"
+   xml:space="preserve"><tspan
+     id="tspan9913-5-2-7"
+     x="973.83655"
+     y="-183.9883">Kista</tspan></text>
+
+
+</g><g
+     style="fill:#ffffff"
+     id="g4416-5"
+     transform="matrix(1.3333,0,0,-1.3562735,126.15004,164.02273)"><path
+       id="path4414-0"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4742"><text
+     style="font-size:16.13685226px;stroke-width:1.34473765"
+     xml:space="preserve"
+     y="273.4726"
+     x="61.266186"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="name-näckrosen"
+     id="text9915-3-2-4"><tspan
+       style="stroke-width:1.34473765"
+       y="273.4726"
+       x="61.266186"
+       id="tspan9913-5-2-8">Näckrosen</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416-7"
+     transform="matrix(1.3333,0,0,-1.3562735,230.31839,164.02273)"><path
+       id="path4414-9"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4748"><text
+     style="font-size:16.13685226px;stroke-width:1.34473765"
+     xml:space="preserve"
+     y="309.65881"
+     x="98.200874"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="name-solna-centrum"
+     id="text9915-3-2-25"><tspan
+       style="stroke-width:1.34473765"
+       y="309.65881"
+       x="98.200874"
+       id="tspan9913-5-2-3">Solna centrum</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416-2"
+     transform="matrix(1.3333,0,0,-1.3562735,282.40255,164.02273)"><path
+       id="path4414-2"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4775"><text
+     xml:space="preserve"
+     style="font-size:16.13692474px;text-align:end;text-anchor:end;stroke-width:1.34474373"
+     y="459.35095"
+     x="323.32135"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="slanted-bottom name-rådhuset"
+     id="text9915-3-5-15-0-9-0-6-1-2"><tspan
+       y="459.35095"
+       x="323.32135"
+       id="tspan8983"
+       style="stroke-width:1.34474373">Rådhuset</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416-54"
+     transform="matrix(1.3333,0,0,-1.3562735,490.73903,164.02273)"><path
+       id="path4414-15"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4754"><text
+     style="font-size:16.13685226px;stroke-width:1.34473765"
+     xml:space="preserve"
+     y="347.7478"
+     x="136.99905"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="name-västra-skogen"
+     id="text9915-3-2-24"><tspan
+       style="stroke-width:1.34473765"
+       y="347.7478"
+       x="136.99905"
+       id="tspan9913-5-2-6">Västra skogen</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416-0"
+     transform="matrix(1.3333,0,0,-1.3562735,334.48673,164.02273)"><path
+       id="path4414-4"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4781"><text
+     id="text9915-4-1"
+     class="end-station align-right name-t-centralen"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     x="406.94424"
+     y="496.97311"
+     style="font-size:17.75053787px;text-align:end;text-anchor:end;stroke-width:1.34473765"
+     xml:space="preserve"><tspan
+       style="stroke-width:1.34473765"
+       id="tspan9913-3-0"
+       x="407.95276"
+       y="496.97311">T-CENTRALEN</tspan></text>
+<g
+     style="fill:#ff0000"
+     id="g4416-8"
+     transform="matrix(1.3333,0,0,-1.3562735,542.82313,164.02273)"><path
+       id="path4414-94"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4763"><g
+     id="g23969"
+     transform="matrix(0.94278547,-0.95903019,-0.94278547,-0.95903019,450.03973,1329.8127)"><g
+   id="g650"
+   transform="translate(665.1,650.34)"><path
+     id="path652"
+     d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.105 0.896,2.002 2.001,2.002 C -0.896,2.002 0,1.105 0,0"
+     style="fill:#ffffff"
+     inkscape:connector-curvature="0" /></g><text
+   id="text9915-3-2-43"
+   class="align-right name-stadshagen"
+   transform="scale(1,-1)"
+   x="654.10394"
+   y="-646.42694"
+   style="text-align:end;text-anchor:end"
+   xml:space="preserve"><tspan
+     id="tspan9913-5-2-5"
+     x="654.10394"
+     y="-646.42694">Stadshagen</tspan></text>
+
+
+</g><g
+     style="fill:#ffffff"
+     id="g4416-42"
+     transform="matrix(1.3333,0,0,-1.3562735,386.57083,164.02273)"><path
+       id="path4414-7"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g><g
+   id="g4769"><text
+     xml:space="preserve"
+     style="font-size:16.13692474px;stroke-width:1.34474373"
+     y="422.04089"
+     x="209.83388"
+     transform="matrix(0.70109247,-0.71317269,0.70109247,0.71317269,0,0)"
+     class="name-fridhemsplan"
+     id="text9915-3-5-15-0-9-0-6-1-4"><tspan
+       y="422.04089"
+       x="209.83388"
+       id="tspan9913-5-6-0-9-0-6-64-1-4"
+       style="stroke-width:1.34474373">Fridhemsplan</tspan></text>
+<g
+     style="fill:#ffffff"
+     id="g4416-48"
+     transform="matrix(1.3333,0,0,-1.3562735,438.65493,164.02273)"><path
+       id="path4414-5"
+       d="m 0,0 c 0,-1.105 -0.896,-2.002 -2.002,-2.002 -1.105,0 -2.001,0.897 -2.001,2.002 0,1.106 0.896,2.003 2.001,2.003 C -0.896,2.003 0,1.106 0,0"
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0" /></g></g></svg>
