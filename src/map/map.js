@@ -4,28 +4,28 @@ import {
 } from "../constants.js"
 
 let trainimations = {
-  0:{
-    prevProgress:0.2,
-    nextProgress:0.5,
-    animProgress:0.7,
+  0: {
+    prevProgress: 0.2,
+    nextProgress: 0.5,
+    animProgress: 0.7,
     trainDiv: null,
     trainSvg: null,
     pathSnap: null,
-    start:null,
+    start: null,
   }
 };
 
 function tweenTrainCircle(trainDiv, trainSvg, pathSnap, journeyNumber, to, duration) {
   var start;
 
-  if(!trainimations.journeyNumber){
-    trainimations.journeyNumber={};
+  if (!trainimations.journeyNumber) {
+    trainimations.journeyNumber = {};
   }
 
-  var ta =trainimations.journeyNumber;
-  ta.prevProgress=ta.nextProgress;
-  ta.nextProgress=to;
-  ta.start=null;
+  var ta = trainimations.journeyNumber;
+  ta.prevProgress = ta.nextProgress;
+  ta.nextProgress = to;
+  ta.start = null;
 
   function step(endPoint, timestamp) {
     // let ta = trainimations.journeyNumber;
@@ -46,19 +46,19 @@ function tweenTrainCircle(trainDiv, trainSvg, pathSnap, journeyNumber, to, durat
     //
     // console.log("interpolate progres", interpolate(progress))
 
-    positionCircle(ta.trainDiv, ta.trainSvg, ta.pathSnap, progress ta.prevProgress);
+    positionCircle(ta.trainDiv, ta.trainSvg, ta.pathSnap, ta.prevProgress);
 
 
     moveCircle(prevStop + interpolate(progress) * (endPoint - prevStop));
 
-      window.requestAnimationFrame(step.bind(this, endPoint));
-      prevStop = endPoint;
-      start = null;
-    }
-  };
-}
+    window.requestAnimationFrame(step.bind(this, endPoint));
+    prevStop = endPoint;
+    start = null;
+  }
+};
 
-function positionCircle(trainDiv, trainSvg, pathSnap, distOnPath){
+
+function positionCircle(trainDiv, trainSvg, pathSnap, distOnPath) {
   const pointAtLength = pathSnap.getPointAtLength(distOnPath * pathSnap.getTotalLength());
 
   Snap(trainSvg).transform('t' + pointAtLength.x + ',' + pointAtLength.y + 'r' + pointAtLength.alpha);
@@ -124,7 +124,7 @@ function setup() {
   const sliderValEl = $(".along-slider-val");
   const circle = $("#train-circle");
 
-  sliderEl.on('mousemove', function() {
+  sliderEl.on('mousemove', function () {
     const path = $("#path-train--line-" + window.line);
     const pathSnap = Snap("#path-train--line-" + window.line);
     sliderValEl.val(this.value);
@@ -140,11 +140,11 @@ function setup() {
 
   });
 
-  sliderEl.on("mouseup", function() {
+  sliderEl.on("mouseup", function () {
     console.log(this.value / 1000)
   })
 
-  $("text").click(function(evt) {
+  $("text").click(function (evt) {
     const station = stationsFull.find(stn => $(this).hasClass(nameToClass(stn.name)));
 
     console.log(station)
